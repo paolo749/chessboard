@@ -1,0 +1,120 @@
+body {
+  height: 100vh;
+  background-color: rgb(35, 35, 35);
+}
+
+.site-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.chessboard {
+  height: 70vh;
+  width: 70vh;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+}
+
+.black-square {
+  width: 82px;
+  height: 82px;
+  background-color: rgb(170, 116, 0);
+  position: relative;
+}
+
+.white-square {
+  background-color: rgb(251, 232, 169);
+  position: relative;
+}
+
+.white-square, .black-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coord-letter {
+  position: absolute;
+  bottom: 3px;
+  left: 4px;
+  margin: 0px 0px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.coord-number {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  margin: 0px 0px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.background-white {
+  color: rgb(131, 90, 0);
+}
+
+.background-black {
+  color: rgb(247, 237, 204);
+}
+
+.white-piece, .black-piece {
+  height: 70px;
+}
+
+.site-logo-img {
+  height: 75px;
+}
+
+.site-logo {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  border-right: 2px solid rgb(190, 190, 190);
+}
+
+.site-logo-text {
+  display: inline-block;
+  color: greenyellow;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: TekTur, Arial;
+  margin: 0px -15px;
+  padding: 0px 0px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: lightblue;
+}
+
+.nav-button {
+  margin-left: 15px;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 300px 500px;
+  align-items: center;
+  background-color: rgb(97, 97, 97);
+}
+
+/* Responsive WebPage Design */
+@media (max-width: 750px) {
+  .chessboard {
+    scale: 0.5;
+  }
+}
+
+@media (min-width: 1500px) {
+  .chessboard {
+    scale: 1.35;
+  }
+}
